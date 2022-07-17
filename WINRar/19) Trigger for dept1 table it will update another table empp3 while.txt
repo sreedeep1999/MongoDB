@@ -1,0 +1,16 @@
+create table dept1(dept_idnumber(5),dept_name varchar(20)not null,mgr_id
+number(30),loc_id number(20));
+
+insert into dept1 values(:dept_id,:dept_name,:mgr_id,:loc_id);
+
+create table empp3(empid number(5)primary key not null,first_name
+varchar(30),last_namevarchar(30),job_idvarchar(20),manager_idnumber(5),emp
+salarynumber,dept_id number(5));
+
+create or replace trigger trig1
+after insert on dept1 for each row
+begin
+update empp3 set empsalary=60000 where dept_id=213;
+end;
+
+insert into dept1 values(:deptid,:deptname,:mgrid,:locid);

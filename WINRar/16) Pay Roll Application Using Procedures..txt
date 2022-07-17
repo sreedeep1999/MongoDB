@@ -1,0 +1,21 @@
+create table pay(eno number(10),ename varchar(10),hra number(10),da
+number(10)); 
+
+insert into pay values(:eno,:ename,:hra,:da);
+
+alter table pay add netamt number(10);
+
+create or replace procedure net(eno1 in number)is
+begin
+update pay set netamt=hra+dawhereeno=eno1;
+end;
+
+declare
+choice number; eno1number(5);
+begin
+eno1:= :eno1; choice:=:choice; if choice=1 then
+net(eno1);
+else
+dbms_output.put_line('PLEASEENTERCHOICE=1');
+endif;
+end;

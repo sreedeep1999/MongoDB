@@ -1,0 +1,17 @@
+declare
+n number(10);
+mnumber(10);
+s number(10);
+r number(10);
+begin
+n:=&n;
+m:=n;
+s:=0;
+while(n>0) loop
+r:=n mod 10; s:=(s*10)+r; n:=floor(n/10);
+end loop; if(m=s)then
+dbms_output.put_line('The given number is a palindrome');
+else
+dbms_output.put_line('The given number is not a palindrome');
+endif;
+end;

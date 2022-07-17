@@ -1,0 +1,14 @@
+declare
+cursorcurisselect*fromfixed;
+begin
+foriincur loop
+ifi.years<=2then
+updatefixedsetinterest=i.amount*0.09*(1/12)
+whereaccno=i.accno; elsifi.years>=2 and i.years<=5 then
+updatefixedsetinterest=i.amount*0.11*(1/12)
+whereaccno=i.accno;
+else
+updatefixedsetinterest=i.amount*0.15*(1/12)where
+accno=i.accno;
+endif; end loop;
+end;

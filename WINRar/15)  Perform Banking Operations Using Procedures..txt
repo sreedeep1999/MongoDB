@@ -1,0 +1,18 @@
+Create or replace procedure with draw(ac_no1in number,amount1innumber)is
+begin
+update accse tbalance=balance-amount1wherec_no=ac_no1;
+end;
+create or replace procedure depositt (ac_no1 innumber,amount1 innumber)is
+begin
+update accset balance=balance+amount1whereac_no=ac_no1;
+end;
+
+
+declare
+choice number; ac_no1 number(5); amount number(5);
+begin
+ac_no1:= :ac_no1; choice:= :choice; amount:= :amount; if choice=1 then
+depositt(ac_no1,amount);
+else
+with draww(ac_no1, amount); end if;
+end;

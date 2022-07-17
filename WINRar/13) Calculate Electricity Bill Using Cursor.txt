@@ -1,0 +1,15 @@
+declare
+cursorcurisselect*fromeb_cal;
+begin
+foriincur loop
+ifi.units<=100then
+updateeb_calsetcharges=i.units*1where
+ebno=i.ebno;
+elsifi.units>100andi.units<=200then
+updateeb_calsetcharges=i.units*2where
+ebno=i.ebno;
+else
+updateeb_calsetcharges=i.units*3where
+ebno=i.ebno;
+endif; end loop;
+end;

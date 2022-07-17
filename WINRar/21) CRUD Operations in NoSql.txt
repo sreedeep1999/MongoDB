@@ -1,0 +1,52 @@
+use  school
+
+db.class
+
+db.class.insertMany([{"id ":"1","name":"sree","mark":"90"}]);
+
+
+db.class.find().pretty();
+
+db.class.find({ "id":"4" })
+
+
+db.class.find({"mark":{"$gt":"50"} });
+
+
+
+db.class.find({"mark":{ "$gte":"55"} });
+
+
+
+db.class.find({"mark":{ "$lt":"50"} });
+
+
+db.class.find({"mark":{ "$lte":"55"} });
+
+
+
+db.class.find({"mark":{ "$eq":"55"} });
+
+
+
+db.class.count();
+5
+
+
+
+db.class.update({"id":"1"},{"set":{"name":"Anupama"}})
+
+
+db.class.remove({ "id":"2" })
+
+db.class.drop
+
+
+
+
+
+
+
+
+
+

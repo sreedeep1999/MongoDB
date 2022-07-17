@@ -1,0 +1,10 @@
+declare
+veno emp5.empno%type:=:empno;
+vename emp5.ename%type:=:ename; vdeptno emp5.deptno%type;
+begin
+>select empno,ename,deptno into veno,vename,vdeptno from emp5 where
+empno=veno and ename=vename; dbms_output.put_line('deptno is'||vdeptno);
+exception
+when no_data_found then
+dbms_output.put_line('no records found');
+end;

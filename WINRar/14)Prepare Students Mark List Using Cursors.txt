@@ -1,0 +1,23 @@
+
+create table stu11(regno number(6) primary key, mark1 number(3),mark2
+number(3),mark3 number(3),mark4 number(3),mark5 number(3),tot number(3),avg
+number(3,2));
+
+
+declare
+cursor is select * from stu11; x stu11.regno%type;
+a stu11.mark1%type; b stu11.mark2%type; f stu11.mark3%type; d
+stu11.mark4%type; e stu11.mark5%type; t stu11.tot%type;
+vstu11.avg%type;
+begin openc; loop
+fetch c into x,a,b,f,d,e,t,v; exit when c% not found;
+dbms_output.put_line('Rollno:'||x); dbms_output.put_line('mark1:'||a);
+dbms_output.put_line('mark2:'||b); dbms_output.put_line('mark3:'||f);
+dbms_output.put_line('mark4:'||d); dbms_output.put_line('mark5:'||e);
+dbms_output.put_line('update the tot'); dbms_output.put_line('update the avg');
+update stu11 set
+tot=(mark1+mark2+mark3+mark4+mark5)where regno=x; update stu11 set
+avg=(tot/5) where regno=x;
+endloop; close c;
+end;
+ 

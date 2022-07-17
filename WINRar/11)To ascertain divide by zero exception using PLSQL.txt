@@ -1,0 +1,12 @@
+declare
+anumber(3);
+b number(3);
+begin
+a:=:a;
+b:=:b;
+a:=a/b;
+dbms_output.put_line('Result is'||a);
+exception
+whenzero_dividethen
+dbms_output.put_line('dividebyzeroerror');
+end;

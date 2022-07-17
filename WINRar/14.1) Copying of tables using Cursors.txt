@@ -1,0 +1,17 @@
+create table stu11(regno number(6) primary key, mark1 number(3),mark2
+number(3),mark3 number(3),mark4 number(3),mark5 number(3),tot number(3),avg
+number(3,2));
+select* fromstu11;
+
+create table st11(regno number(6) primary key, mark1 number(3),mark2
+number(3),mark3 number(3),mark4 number(3),mark5 number(3),tot number(3),avg
+number(3,2));
+
+declare
+cursorcurisselect*fromstu11;
+begin
+for iincur
+loop
+insert into st11 values(i.regno,i.mark1,i.mark2,i.mark3,i.mark4,i.mark5, i.tot,i.avg);
+endloop;
+end;
