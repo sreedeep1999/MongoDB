@@ -15,7 +15,7 @@ choice number; eno1number(5);
 begin
 eno1:= :eno1; choice:=:choice;
 
-if choice=1 then
+if (choice=1) then
 net(eno1);
 else
 dbms_output.put_line('PLEASEENTERCHOICE=1');
