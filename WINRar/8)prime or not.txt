@@ -1,16 +1,27 @@
-declare
-n number(10);i number(10); mnumber(10);
-fnumber(10):=0;
-begin
-n:=&n;
-m:=n;
-foriin2..m/2 loop
-if(nmodi=0)then
-f:=f+1;
-endif; end loop;
-if(f=0)then
-dbms_output.put_line('the given number is prime');
-else
-dbms_output.put_line('the given number is not prime');
-endif;
-end;
+DECLARE
+N NUMBER (20); 
+I NUMBER (20);
+M NUMBER(20); 
+
+BEGIN
+
+N : = : N; 
+FOR I IN 1..N
+
+LOOP
+
+IF (N MOD I=0) THEN
+M := M+1;
+END IF;
+
+END LOOP; 
+
+IF (N>0)
+THEN
+DBMS_OUTPUT.PUT_LINE(N | | ' NUMBER IS PRIME');
+
+ELSE
+DBMS_OUTPUT.PUT_LINE(N | |' NUMBER IS NOT PRIME');
+END IF;
+
+END
