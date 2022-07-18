@@ -1,17 +1,19 @@
-declare
-n number(10);
-mnumber(10);
-s number(10);
-r number(10);
-begin
-n:=&n;
-m:=n;
-s:=0;
-while(n>0) loop
-r:=n mod 10; s:=(s*10)+r; n:=floor(n/10);
-end loop; if(m=s)then
-dbms_output.put_line('The given number is a palindrome');
-else
-dbms_output.put_line('The given number is not a palindrome');
-endif;
-end;
+N :=:N;
+M : =N;
+S : =0; 
+
+WHILE (N>0)
+LOOP
+
+R : =N MOD 10;
+S : =(S*10)+R; 
+N:=FLOOR (N/10);
+
+IF (M=S) THEN
+END LOOP; 
+
+DBMS_OUTPUT.PUT_LINE('THE GIVEN NUMBER IS PALINDROME."); DBMS_OUTPUT.PUT_LINE(THE GIVEN NUMBER IS NOT PALINDROME.");
+ELSE
+
+END IF;
+END
