@@ -6,7 +6,7 @@ M NUMBER (20):=0;
 BEGIN 
 N:=:N;
 
-FOR I IN I..N
+FOR I IN 1..N
 LOOP
 
 IF (N MOD I=0)THEN
